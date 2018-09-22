@@ -5946,9 +5946,7 @@ _ACEOF
   LIBS="-lssl $LIBS"
 
 else
-#i  as_fn_error $? "OpenSSL library required" "$LINENO" 5
-
-  LIBS="-lssl $LIBS"
+  as_fn_error $? "OpenSSL library required" "$LINENO" 5
 fi
 
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for EVP_DigestFinal_ex in -lcrypto" >&5

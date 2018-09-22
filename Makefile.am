@@ -34,7 +34,7 @@ skminer_SOURCES		= elist.h miner.h compat.h \
 
 skminer_LDFLAGS		=  @CUDA_LDFLAGS@
 skminer_LDADD		= @LIBCURL@ @JANSSON_LIBS@  @WS2_LIBS@ @CUDA_LIBS@ @OPENMP_CFLAGS@ @LIBS@ -L/usr/local/lib -L/usr/local/cuda/lib64 -lboost_filesystem -lboost_system -lboost_program_options -lboost_thread -L/usr/local/lib/
-skminer_CPPFLAGS	= -msse2 @LIBCURL_CPPFLAGS@ @OPENMP_CFLAGS@ -std=c++11 -L/usr/local/boost -fno-strict-aliasing $(JANSSON_INCLUDES) -DSCRYPT_KECCAK512 -DSCRYPT_CHACHA -DSCRYPT_CHOOSE_COMPILETIME -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE
+skminer_CPPFLAGS	= -misel @LIBCURL_CPPFLAGS@ @OPENMP_CFLAGS@ -std=c++11 -L/usr/local/boost -fno-strict-aliasing $(JANSSON_INCLUDES) -DSCRYPT_KECCAK512 -DSCRYPT_CHACHA -DSCRYPT_CHOOSE_COMPILETIME -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE
 
 # we're now targeting all major compute architectures within one binary.
 # require cuda 6.5 or higher
