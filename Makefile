@@ -408,7 +408,7 @@ skminer_SOURCES = elist.h miner.h compat.h \
 
 skminer_LDFLAGS = -L/usr/local/cuda/lib
 skminer_LDADD = -L/opt/anaconda3/lib -lcurl compat/jansson/libjansson.a   -lcudart -static-libstdc++ -fopenmp -lcrypto -lssl  -L/usr/local/lib -L/usr/local/cuda/lib64 -lboost_filesystem -lboost_system -lboost_program_options -lboost_thread
-skminer_CPPFLAGS = -msse2 -I/opt/anaconda3/include -fopenmp -std=c++11 -L/usr/local/boost -fno-strict-aliasing $(JANSSON_INCLUDES) -DSCRYPT_KECCAK512 -DSCRYPT_CHACHA -DSCRYPT_CHOOSE_COMPILETIME -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE
+skminer_CPPFLAGS = -misel -I/opt/anaconda3/include -fopenmp -std=c++11 -L/usr/local/boost -fno-strict-aliasing $(JANSSON_INCLUDES) -DSCRYPT_KECCAK512 -DSCRYPT_CHACHA -DSCRYPT_CHOOSE_COMPILETIME -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE
 all: cpuminer-config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
 
